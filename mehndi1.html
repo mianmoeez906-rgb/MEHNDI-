@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="dynamic-title">Waleed & Momina - Mehndi Night</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sparkles" id="sparkles"></div>
+
+    <!-- Welcome Entry Screen -->
+    <div id="welcome-screen">
+        <div class="welcome-mehndi-bg">
+            <div class="welcome-content-box">
+                <span class="mehndi-tag"><i class="fa-solid fa-spa"></i> DHOLKI & HENNA NIGHT <i class="fa-solid fa-spa"></i></span>
+                <h1 class="animated-names dynamic-title">Waleed & Momina</h1>
+                <p class="welcome-subtext dynamic-event-type">The Mehndi Celebration</p>
+                <div class="welcome-buttons-group">
+                    <button class="stylish-btn music-trigger-btn" id="musicBtn">
+                        <i class="fa-solid fa-music"></i> <span>PLAY MUSIC</span>
+                    </button>
+                    <button class="stylish-btn open-invite-btn disabled-btn" id="openBtn" disabled>
+                        <i class="fa-solid fa-envelope-open"></i> <span>OPEN INVITATION</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Invitation Container -->
+    <div class="main-container" id="mainContainer">
+        <!-- Hero Banner -->
+        <section class="section mehndi-hero-section">
+            <div class="mehndi-overlay-box">
+                <h2 class="bismillah-reveal">﷽</h2>
+                <p class="quote">"May your lives be filled with vibrant colors, joyful melodies, and endless blessings as you step into this new chapter together."</p>
+                <h1 class="section-main-title dynamic-event-type">The Mehndi Celebration</h1>
+            </div>
+        </section>
+
+        <!-- Couple Showcase (Horizontal Split Layout) -->
+        <section class="section">
+            <h2 class="couple-heading">MEHNDI & MAYOON HONOREES</h2>
+            <div class="couple-cards">
+                <div class="person-card groom-card">
+                    <div class="img-ring">
+                        <img src="Groom.jpeg" alt="Groom" class="person-img dynamic-groom-img">
+                    </div>
+                    <div class="person-role">Groom</div>
+                    <h3 class="person-name dynamic-groom">Mehar Waleed</h3>
+                </div>
+
+                <div class="couple-divider">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+
+                <div class="person-card bride-card">
+                    <div class="img-ring">
+                        <img src="Bride.jpeg" alt="Bride" class="person-img dynamic-bride-img">
+                    </div>
+                    <div class="person-role">Bride</div>
+                    <h3 class="person-name dynamic-bride">Momina</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mehndi Festivities & Event Details Grid -->
+        <section class="section">
+            <div class="mehndi-stage-container">
+                <div class="flower-garland left-garland">
+                    <span>🌼</span>
+                    <span>🌿</span>
+                    <span>🌼</span>
+                </div>
+                <div class="dholak-card">
+                    <div class="dholak-illustration">
+                        <i class="fa-solid fa-drum dholak-icon"></i>
+                    </div>
+                    <div class="dholak-title">RANG, DHOLKI & HENNA</div>
+                    <div class="dholak-subtitle">Wear Festive Yellow, Mustard, Emerald or Gold</div>
+                </div>
+                <div class="flower-garland right-garland">
+                    <span>🌼</span>
+                    <span>🌿</span>
+                    <span>🌼</span>
+                </div>
+            </div>
+
+            <div class="event-box">
+                <h3 class="event-title"><i class="fa-solid fa-calendar-days"></i> Mehndi Event Details</h3>
+                <div class="event-details">
+                    <p><i class="fa-solid fa-clock"></i> <strong>Time:</strong> <span class="dynamic-time">7:00 PM Onwards</span></p>
+                    <p><i class="fa-solid fa-calendar"></i> <strong>Date:</strong> <span class="dynamic-date">20th August 2026</span></p>
+                    <p><i class="fa-solid fa-location-dot"></i> <strong>Venue:</strong> <span class="dynamic-venue">Pearl Palace Shahdara, Lahore</span></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <button id="music-toggle" title="Play/Pause Music"><i class="fa-solid fa-music"></i></button>
+    <audio id="bg-music" loop><source src="romanticsong.mp3" type="audio/mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
