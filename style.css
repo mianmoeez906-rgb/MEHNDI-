@@ -430,6 +430,31 @@ body {
     width: 26px;
 }
 
+/* Live Location Button */
+.map-location-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 13px 18px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--haldi-gold), #cf8700);
+    color: #09110c;
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.map-location-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 22px rgba(245, 183, 25, 0.55);
+}
+
 /* Floating Music Button */
 #music-toggle {
     position: fixed;
