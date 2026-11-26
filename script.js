@@ -1,5 +1,5 @@
 const eventData = {
-    coupleTitle: "Waleed & Momina",
+    coupleTitle: "AHMAD",
     eventType: "The Mehndi Celebration",
     groomName: "AHMAD",
     eventTime: "7:00 PM Onwards",
