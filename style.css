@@ -212,15 +212,25 @@ body {
     padding: 48px 18px;
 }
 
-/* Couple Section - Circular Haldi Medallions */
+/* Honoree Heading */
 .couple-heading {
     font-family: 'Cinzel', serif;
     font-size: 1.7rem;
     color: var(--haldi-gold);
     letter-spacing: 2px;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
 }
 
+.honoree-only-name {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(2rem, 5.5vw, 3.1rem);
+    color: var(--marigold-light);
+    letter-spacing: 3px;
+    margin: 10px auto 28px;
+    text-shadow: 0 0 22px rgba(245, 183, 25, 0.55);
+}
+
+/* GROOM & BRIDE CARD STYLES COMMENTED OUT FOR FUTURE USE
 .couple-cards {
     display: flex;
     justify-content: center;
@@ -284,6 +294,7 @@ body {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+*/
 
 /* Mehndi Stage & Dholak */
 .mehndi-stage-container {
@@ -291,7 +302,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 22px;
-    margin: 38px auto 0;
+    margin: 24px auto 0;
     padding: 26px 22px;
     background: linear-gradient(135deg, rgba(245, 183, 25, 0.14), rgba(24, 92, 61, 0.22));
     border: 2px solid var(--haldi-gold);
