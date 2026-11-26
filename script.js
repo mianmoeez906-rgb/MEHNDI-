@@ -4,11 +4,12 @@ const eventData = {
     groomName: "Mehar Waleed",
     brideName: "Momina",
     eventTime: "7:00 PM Onwards",
-    eventDate: "20th August 2026",
-    eventVenue: "Pearl Palace Shahdara, Lahore",
-    groomImg: "Groom.jpeg",      // Yahan groom ki photo ka naam likhen
-    brideImg: "Bride.jpeg",       // Yahan bride ki photo ka naam likhen
-    mehndiSong: "Mehndisong.mp3"  // Yahan sirf Mehndi event ke song ka naam likhen
+    eventDate: "20th August 2026", // <-- Date change karni ho to yahan likhen
+    eventVenue: "Pearl Palace Shahdara, Lahore", // <-- Hall/Venue ka naam yahan likhen
+    venueMapLink: "https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore", // <-- Google Maps ka live link yahan paste karen
+    groomImg: "Groom.jpeg",
+    brideImg: "Bride.jpeg",
+    mehndiSong: "mehndisong.mp3" // <-- Repo mein jo MP3 file rakhi hai uska exact naam yahan likhen
 };
 
 function createSparkles() {
@@ -41,7 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.dynamic-groom-img').src = eventData.groomImg;
     document.querySelector('.dynamic-bride-img').src = eventData.brideImg;
 
-    // Mehndi Song Source Setup
+    const venueMapBtn = document.getElementById("venueMapBtn");
+    if (venueMapBtn && eventData.venueMapLink) {
+        venueMapBtn.href = eventData.venueMapLink;
+    }
+
+    // Mehndi Song Setup
     const musicBtn = document.getElementById("musicBtn");
     const openBtn = document.getElementById("openBtn");
     const welcomeScreen = document.getElementById("welcome-screen");
@@ -50,10 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const musicToggle = document.getElementById("music-toggle");
     let isPlaying = false;
 
-    if (bgMusic && eventData.mehndiSong) {
-        bgMusic.src = eventData.mehndiSong;
-        bgMusic.load();
+    function syncMusicSource() {
+        if (!bgMusic || !eventData.mehndiSong) return;
+        const encodedFile = encodeURI(eventData.mehndiSong);
+        if (!bgMusic.src || !bgMusic.src.endsWith(encodedFile)) {
+            bgMusic.src = encodedFile;
+            bgMusic.load();
+        }
     }
+
+    syncMusicSource();
 
     function unlockInvitation() {
         openBtn.removeAttribute("disabled");
@@ -61,12 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     musicBtn.addEventListener("click", () => {
+        syncMusicSource();
         bgMusic.play().then(() => {
             isPlaying = true;
             musicBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>MEHNDI MUSIC PLAYING</span>';
             musicBtn.classList.add("playing");
             unlockInvitation();
-        }).catch(() => {
+        }).catch((err) => {
+            console.log("Audio play issue:", err);
+            musicBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> <span>CHECK MP3 FILE NAME</span>';
             unlockInvitation();
         });
     });
@@ -81,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     musicToggle.addEventListener("click", () => {
+        syncMusicSource();
         if (isPlaying) {
             bgMusic.pause();
             isPlaying = false;
