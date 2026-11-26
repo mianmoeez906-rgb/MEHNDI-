@@ -6,11 +6,10 @@
 
 :root {
     --bg-dark: #070d09;
-    --bg-card: rgba(14, 24, 17, 0.92);
-    --haldi-gold: #f4b41a;
-    --marigold-light: #ffe28a;
-    --emerald-accent: #1f6f4a;
-    --emerald-glow: rgba(46, 160, 105, 0.35);
+    --bg-card: rgba(14, 25, 18, 0.92);
+    --haldi-gold: #f5b719;
+    --marigold-light: #ffe58f;
+    --emerald-deep: #185c3d;
     --text-main: #fbf6e9;
     --text-muted: #d6cbb2;
 }
@@ -22,12 +21,12 @@ body {
     overflow-x: hidden;
     position: relative;
     background-image:
-        radial-gradient(circle at 20% 10%, rgba(244, 180, 26, 0.14) 0%, transparent 45%),
-        radial-gradient(circle at 80% 25%, rgba(31, 111, 74, 0.22) 0%, transparent 50%),
-        linear-gradient(180deg, #0b140e 0%, #050906 100%);
+        radial-gradient(circle at 20% 12%, rgba(245, 183, 25, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 82% 28%, rgba(24, 92, 61, 0.25) 0%, transparent 50%),
+        linear-gradient(180deg, #0b150e 0%, #050906 100%);
 }
 
-/* Floating Golden & Marigold Sparkles */
+/* Floating Sparkles */
 .sparkles {
     position: fixed;
     top: 0;
@@ -42,7 +41,7 @@ body {
     position: absolute;
     background: var(--marigold-light);
     border-radius: 50%;
-    animation: floatSparkle 4.5s infinite linear;
+    animation: floatSparkle 4.4s infinite linear;
     opacity: 0;
     box-shadow: 0 0 8px var(--haldi-gold);
 }
@@ -81,7 +80,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(160deg, rgba(10, 24, 15, 0.78), rgba(26, 17, 4, 0.86));
+    background: linear-gradient(155deg, rgba(9, 24, 15, 0.78), rgba(28, 18, 4, 0.86));
     z-index: 1;
 }
 
@@ -94,19 +93,19 @@ body {
     align-items: center;
     justify-content: center;
     padding: 36px 28px;
-    border-radius: 24px;
-    border: 1px solid rgba(244, 180, 26, 0.45);
-    background: rgba(8, 16, 11, 0.55);
+    border-radius: 26px;
+    border: 1.5px solid rgba(245, 183, 25, 0.5);
+    background: rgba(8, 17, 11, 0.58);
     backdrop-filter: blur(6px);
     animation: fadeInUp 1.4s ease-out;
 }
 
-.mehndi-tag {
-    font-size: 0.78rem;
+.mehndi-pill {
+    font-size: 0.75rem;
     letter-spacing: 3px;
     color: var(--marigold-light);
-    background: rgba(244, 180, 26, 0.14);
-    border: 1px solid rgba(244, 180, 26, 0.35);
+    background: rgba(245, 183, 25, 0.14);
+    border: 1px solid rgba(245, 183, 25, 0.35);
     padding: 6px 16px;
     border-radius: 30px;
     margin-bottom: 16px;
@@ -123,7 +122,7 @@ body {
     color: var(--marigold-light);
     letter-spacing: 3px;
     margin-bottom: 12px;
-    text-shadow: 0 0 28px rgba(244, 180, 26, 0.85), 0 3px 6px rgba(0, 0, 0, 0.85);
+    text-shadow: 0 0 28px rgba(245, 183, 25, 0.85), 0 3px 6px rgba(0, 0, 0, 0.85);
 }
 
 .welcome-subtext {
@@ -161,34 +160,34 @@ body {
 }
 
 .music-trigger-btn {
-    background: linear-gradient(135deg, #163324 0%, #0d1d15 100%);
+    background: linear-gradient(135deg, #163424 0%, #0c1d14 100%);
     border: 2px solid var(--haldi-gold);
     color: var(--marigold-light);
-    box-shadow: 0 0 18px rgba(244, 180, 26, 0.25);
+    box-shadow: 0 0 18px rgba(245, 183, 25, 0.25);
 }
 
 .music-trigger-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 24px rgba(244, 180, 26, 0.45);
+    box-shadow: 0 0 24px rgba(245, 183, 25, 0.45);
 }
 
 .music-trigger-btn.playing {
-    background: linear-gradient(135deg, #f4b41a, #d18c00);
+    background: linear-gradient(135deg, var(--haldi-gold), #cf8700);
     color: #0b140e;
     border-color: var(--marigold-light);
-    box-shadow: 0 0 28px rgba(244, 180, 26, 0.75);
+    box-shadow: 0 0 28px rgba(245, 183, 25, 0.75);
 }
 
 .open-invite-btn {
-    background: linear-gradient(135deg, #f4b41a 0%, #cf8700 100%);
+    background: linear-gradient(135deg, var(--haldi-gold) 0%, #cf8700 100%);
     border: 2px solid var(--marigold-light);
     color: #09110c;
-    box-shadow: 0 0 26px rgba(244, 180, 26, 0.55);
+    box-shadow: 0 0 26px rgba(245, 183, 25, 0.55);
 }
 
 .open-invite-btn:not(:disabled):hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 36px rgba(244, 180, 26, 0.85);
+    box-shadow: 0 0 36px rgba(245, 183, 25, 0.85);
 }
 
 .disabled-btn {
@@ -205,59 +204,15 @@ body {
     transition: opacity 1.4s ease;
     max-width: 860px;
     margin: 0 auto;
-    padding: 24px 18px 80px;
+    padding: 24px 18px 84px;
     text-align: center;
 }
 
 .section {
-    padding: 52px 18px;
-    border-bottom: 1px dashed rgba(244, 180, 26, 0.28);
+    padding: 48px 18px;
 }
 
-.section:last-of-type {
-    border-bottom: none;
-}
-
-/* Hero Banner */
-.mehndi-hero-section {
-    position: relative;
-    background: linear-gradient(rgba(8, 18, 12, 0.65), rgba(20, 14, 3, 0.78)),
-                url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
-    background-size: cover;
-    border-radius: 24px;
-    margin-top: 12px;
-    border: 2px solid var(--haldi-gold);
-    box-shadow: 0 0 35px var(--emerald-glow);
-}
-
-.mehndi-overlay-box {
-    padding: 26px 16px;
-}
-
-.bismillah-reveal {
-    font-family: 'Cinzel', serif;
-    font-size: 1.9rem;
-    color: var(--marigold-light);
-    text-shadow: 0 0 16px rgba(244, 180, 26, 0.65);
-}
-
-.quote {
-    font-style: italic;
-    font-size: 0.96rem;
-    color: var(--text-muted);
-    max-width: 620px;
-    margin: 16px auto 26px;
-    line-height: 1.7;
-}
-
-.section-main-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.7rem, 4.5vw, 2.4rem);
-    color: var(--marigold-light);
-    margin-top: 10px;
-}
-
-/* Couple Section - Distinct Medallion Frame Format */
+/* Couple Section - Circular Haldi Medallions */
 .couple-heading {
     font-family: 'Cinzel', serif;
     font-size: 1.7rem;
@@ -277,8 +232,8 @@ body {
 .person-card {
     width: 270px;
     background: var(--bg-card);
-    border: 1.5px solid rgba(244, 180, 26, 0.55);
-    border-radius: 24px;
+    border: 1.5px solid rgba(245, 183, 25, 0.55);
+    border-radius: 26px;
     padding: 26px 18px;
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.65);
     transition: transform 0.3s ease;
@@ -330,18 +285,18 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Mehndi Stage & Dholak Accent */
+/* Mehndi Stage & Dholak */
 .mehndi-stage-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 22px;
-    margin: 0 auto 34px;
+    margin: 38px auto 0;
     padding: 26px 22px;
-    background: linear-gradient(135deg, rgba(244, 180, 26, 0.12), rgba(31, 111, 74, 0.18));
+    background: linear-gradient(135deg, rgba(245, 183, 25, 0.14), rgba(24, 92, 61, 0.22));
     border: 2px solid var(--haldi-gold);
     border-radius: 24px;
-    box-shadow: 0 0 26px rgba(244, 180, 26, 0.22);
+    box-shadow: 0 0 26px rgba(245, 183, 25, 0.22);
     max-width: 560px;
 }
 
@@ -380,7 +335,7 @@ body {
     align-items: center;
     margin: 0 auto 14px;
     border: 3px solid var(--marigold-light);
-    box-shadow: 0 0 22px rgba(244, 180, 26, 0.65);
+    box-shadow: 0 0 22px rgba(245, 183, 25, 0.65);
     animation: beatDholak 1s infinite alternate ease-in-out;
 }
 
@@ -408,10 +363,46 @@ body {
     margin-top: 6px;
 }
 
-/* Event Box */
+/* Blessing Banner & Event Box */
+.mehndi-hero-section {
+    position: relative;
+    background: linear-gradient(rgba(8, 18, 12, 0.72), rgba(20, 14, 3, 0.84)),
+                url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80') no-repeat center center;
+    background-size: cover;
+    border-radius: 24px;
+    border: 2px solid var(--haldi-gold);
+    box-shadow: 0 0 35px rgba(24, 92, 61, 0.35);
+}
+
+.mehndi-overlay-box {
+    padding: 12px 14px 28px;
+}
+
+.bismillah-reveal {
+    font-family: 'Cinzel', serif;
+    font-size: 1.9rem;
+    color: var(--marigold-light);
+    text-shadow: 0 0 16px rgba(245, 183, 25, 0.65);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 0.96rem;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 16px auto 22px;
+    line-height: 1.7;
+}
+
+.section-main-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.7rem, 4.5vw, 2.35rem);
+    color: var(--marigold-light);
+}
+
 .event-box {
     background: var(--bg-card);
-    border: 1.5px solid rgba(244, 180, 26, 0.45);
+    border: 1.5px solid rgba(245, 183, 25, 0.45);
     padding: 28px 30px;
     border-radius: 20px;
     text-align: left;
@@ -425,7 +416,7 @@ body {
     font-size: 1.45rem;
     color: var(--marigold-light);
     margin-bottom: 16px;
-    border-bottom: 1px solid rgba(244, 180, 26, 0.45);
+    border-bottom: 1px solid rgba(245, 183, 25, 0.45);
     padding-bottom: 10px;
 }
 
@@ -455,5 +446,5 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 16px rgba(244, 180, 26, 0.4);
+    box-shadow: 0 0 16px rgba(245, 183, 25, 0.4);
 }
