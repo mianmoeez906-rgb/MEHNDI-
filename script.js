@@ -9,7 +9,7 @@ const eventData = {
     venueMapLink: "https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore", // <-- Google Maps ka live link yahan paste karen
     groomImg: "Groom.jpeg",
     brideImg: "Bride.jpeg",
-    mehndiSong: "mehndisong.mp3" // <-- Repo mein jo MP3 file rakhi hai uska exact naam yahan likhen
+    mehndiSong: "Mehndi Song.mp3" // <-- Repo mein jo MP3 file rakhi hai uska exact naam yahan likhen
 };
 
 function createSparkles() {
