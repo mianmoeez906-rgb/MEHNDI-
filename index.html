@@ -94,12 +94,17 @@
                     <p><i class="fa-solid fa-calendar"></i> <strong>Date:</strong> <span class="dynamic-date">20th August 2026</span></p>
                     <p><i class="fa-solid fa-location-dot"></i> <strong>Venue:</strong> <span class="dynamic-venue">Pearl Palace Shahdara, Lahore</span></p>
                 </div>
+
+                <a id="venueMapBtn" class="map-location-btn" href="https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>OPEN LIVE HALL LOCATION</span>
+                </a>
             </div>
         </section>
     </div>
 
     <button id="music-toggle" title="Play/Pause Mehndi Music"><i class="fa-solid fa-music"></i></button>
-    <audio id="bg-music" loop></audio>
+    <audio id="bg-music" loop preload="auto" playsinline></audio>
     <script src="script.js"></script>
 </body>
 </html>
