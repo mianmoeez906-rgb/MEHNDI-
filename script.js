@@ -1,12 +1,16 @@
 const eventData = {
     coupleTitle: "AHMAD",
     eventType: "The Mehndi Celebration",
-    groomName: "AHMAD",
     eventTime: "7:00 PM Onwards",
-    eventDate: "14 JANUARY 2027", // <-- Date change karni ho to yahan likhen
-    eventVenue: "Pearl Palace Shahdara, Lahore", // <-- Hall/Venue ka naam yahan likhen
-    venueMapLink: "https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore", // <-- Google Maps ka live link yahan paste karen
+    eventDate: "14 JANUARY 2027",
+    eventVenue: "Pearl Palace Shahdara, Lahore",
+    venueMapLink: "https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore",
     mehndiSong: "Mehndi Song.mp3" // <-- Repo mein jo MP3 file rakhi hai uska exact naam yahan likhen
+    // GROOM & BRIDE DATA COMMENTED OUT FOR FUTURE USE:
+    // groomName: "AHMAD",
+    // brideName: "Bride Name",
+    // groomImg: "Groom.jpeg",
+    // brideImg: "Bride.jpeg"
 };
 
 function createSparkles() {
@@ -31,13 +35,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Dynamic Content Update
     document.querySelectorAll('.dynamic-title').forEach(el => el.innerText = eventData.coupleTitle);
     document.querySelectorAll('.dynamic-event-type').forEach(el => el.innerText = eventData.eventType);
-    document.querySelectorAll('.dynamic-groom').forEach(el => el.innerText = eventData.groomName);
-    document.querySelectorAll('.dynamic-bride').forEach(el => el.innerText = eventData.brideName);
     document.querySelectorAll('.dynamic-time').forEach(el => el.innerText = eventData.eventTime);
     document.querySelectorAll('.dynamic-date').forEach(el => el.innerText = eventData.eventDate);
     document.querySelectorAll('.dynamic-venue').forEach(el => el.innerText = eventData.eventVenue);
-    document.querySelector('.dynamic-groom-img').src = eventData.groomImg;
-    document.querySelector('.dynamic-bride-img').src = eventData.brideImg;
+
+    // GROOM & BRIDE DOM UPDATES COMMENTED OUT FOR FUTURE USE:
+    // document.querySelectorAll('.dynamic-groom').forEach(el => el.innerText = eventData.groomName);
+    // document.querySelectorAll('.dynamic-bride').forEach(el => el.innerText = eventData.brideName);
+    // const groomImgEl = document.querySelector('.dynamic-groom-img');
+    // const brideImgEl = document.querySelector('.dynamic-bride-img');
+    // if (groomImgEl) groomImgEl.src = eventData.groomImg;
+    // if (brideImgEl) brideImgEl.src = eventData.brideImg;
 
     const venueMapBtn = document.getElementById("venueMapBtn");
     if (venueMapBtn && eventData.venueMapLink) {
