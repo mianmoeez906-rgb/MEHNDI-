@@ -3,7 +3,7 @@ const eventData = {
     eventType: "The Mehndi Celebration",
     groomName: "AHMAD",
     eventTime: "7:00 PM Onwards",
-    eventDate: "20th August 2026", // <-- Date change karni ho to yahan likhen
+    eventDate: "14 JANUARY 2027", // <-- Date change karni ho to yahan likhen
     eventVenue: "Pearl Palace Shahdara, Lahore", // <-- Hall/Venue ka naam yahan likhen
     venueMapLink: "https://maps.google.com/?q=Pearl+Palace+Shahdara+Lahore", // <-- Google Maps ka live link yahan paste karen
     mehndiSong: "Mehndi Song.mp3" // <-- Repo mein jo MP3 file rakhi hai uska exact naam yahan likhen
