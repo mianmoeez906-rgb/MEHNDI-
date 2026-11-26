@@ -6,8 +6,9 @@ const eventData = {
     eventTime: "7:00 PM Onwards",
     eventDate: "20th August 2026",
     eventVenue: "Pearl Palace Shahdara, Lahore",
-    groomImg: "Groom.jpeg", // Yahan apni photo ka naam likhen
-    brideImg: "Bride.jpeg"  // Yahan apni photo ka naam likhen
+    groomImg: "Groom.jpeg",      // Yahan groom ki photo ka naam likhen
+    brideImg: "Bride.jpeg",       // Yahan bride ki photo ka naam likhen
+    mehndiSong: "Mehndisong.mp3"  // Yahan sirf Mehndi event ke song ka naam likhen
 };
 
 function createSparkles() {
@@ -20,7 +21,7 @@ function createSparkles() {
         dot.style.width = `${size}px`;
         dot.style.height = `${size}px`;
         dot.style.left = `${Math.random() * 100}%`;
-        dot.style.animationDelay = `${Math.random() * 4.5}s`;
+        dot.style.animationDelay = `${Math.random() * 4.4}s`;
         dot.style.animationDuration = `${Math.random() * 3 + 3.5}s`;
         container.appendChild(dot);
     }
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.dynamic-groom-img').src = eventData.groomImg;
     document.querySelector('.dynamic-bride-img').src = eventData.brideImg;
 
-    // Welcome & Audio Controls
+    // Mehndi Song Source Setup
     const musicBtn = document.getElementById("musicBtn");
     const openBtn = document.getElementById("openBtn");
     const welcomeScreen = document.getElementById("welcome-screen");
@@ -49,17 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const musicToggle = document.getElementById("music-toggle");
     let isPlaying = false;
 
+    if (bgMusic && eventData.mehndiSong) {
+        bgMusic.src = eventData.mehndiSong;
+        bgMusic.load();
+    }
+
+    function unlockInvitation() {
+        openBtn.removeAttribute("disabled");
+        openBtn.classList.remove("disabled-btn");
+    }
+
     musicBtn.addEventListener("click", () => {
         bgMusic.play().then(() => {
             isPlaying = true;
-            musicBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>MUSIC PLAYING</span>';
+            musicBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>MEHNDI MUSIC PLAYING</span>';
             musicBtn.classList.add("playing");
-            openBtn.removeAttribute("disabled");
-            openBtn.classList.remove("disabled-btn");
+            unlockInvitation();
         }).catch(() => {
-            // Audio file missing hone par bhi invitation unlock ho sake
-            openBtn.removeAttribute("disabled");
-            openBtn.classList.remove("disabled-btn");
+            unlockInvitation();
         });
     });
 
